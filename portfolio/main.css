@@ -15,6 +15,11 @@ body {
   cursor: grab;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 body:active {
   cursor: grabbing;
 }
@@ -113,6 +118,10 @@ button {
   cursor: default;
   z-index: 100;
 }
+/* 
+.display-none {
+  display: none;
+} */
 
 .top-box {
   display: flex;
@@ -124,6 +133,8 @@ button {
   margin: 0;
   margin-top: 80px;
 }
+
+.hover {}
 
 .hover-color:hover {
   color: #FFCB00;
@@ -202,6 +213,28 @@ title {
   border-radius: 35px;
 }
 
+.home-container {
+}
+
+.home-img {
+  position: absolute;
+  border-radius: 35px;
+  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.home-img:hover {
+  transform: scale(1.1);
+}
+
+.black-bg {
+  background-color: black;
+  opacity: 100%;
+  width: 100%;
+  height: 100%;
+}
+
 .butterfly {
   position: absolute;
   bottom: -100px;
@@ -221,7 +254,7 @@ title {
   flex-direction: column;
   top: 0;
   right: 0;
-  min-height: 100%;
+  min-height: 100vh;
   opacity: 0;
   background-color:#161616;
   width: 80%;
@@ -296,7 +329,7 @@ title {
   align-items: center;
   width: 100%;
   margin-top: 10px;
-  height: 600px;
+  height: fit-content;
   /* gap: 80px; */
 }
 
@@ -347,6 +380,12 @@ title {
   pointer-events: auto;
 }
 
+#sosi-home {
+  width: 170px;
+  left: 1370px;
+  top: -73px;
+}
+
 #vir {
   display: none;
   pointer-events: none;
@@ -355,6 +394,12 @@ title {
 #vir.visible {
   display: block;
   pointer-events: auto;
+}
+
+#vir-home {
+  width: 260px;
+  left: 790px;
+  top:-28px;
 }
 
 #ea {
@@ -377,6 +422,12 @@ title {
   pointer-events: auto;
 }
 
+#tedx-home {
+  width: 206px;
+  left: 1236px;
+  top: 700px;
+}
+
 #cpb {
   display: none;
   pointer-events: none;
@@ -385,6 +436,12 @@ title {
 #cpb.visible {
   display: block;
   pointer-events: auto;
+}
+
+#cpb-home {
+  width: 206px;
+  left: 992px;
+  top: 723px;
 }
 
 #collected {
@@ -397,6 +454,12 @@ title {
   pointer-events: auto;
 }
 
+#collected-home {
+  width: 380px;
+  left: 570px;
+  top: 683px;
+}
+
 #arcana {
   display: none;
   pointer-events: none;
@@ -405,6 +468,12 @@ title {
 #arcana.visible {
   display: block;
   pointer-events: auto;
+}
+
+#arcana-home {
+  width: 340px;
+  left: 420px;
+  top: -48px;
 }
 
 #kosu {
@@ -417,6 +486,12 @@ title {
   pointer-events: auto;
 }
 
+#kosu-home {
+  width: 270px;
+  left: 1590px;
+  top: -38px;
+}
+
 #dp {
   display: none;
   pointer-events: none;
@@ -425,6 +500,12 @@ title {
 #dp.visible {
   display: block;
   pointer-events: auto;
+}
+
+#dp-home {
+  width: 270px;
+  left: 1075px;
+  top: -60px;
 }
 
 #it {
@@ -437,6 +518,12 @@ title {
   pointer-events: auto;
 }
 
+#it-home {
+  width: 220px;
+  left: 1606px;
+  top: 180px;
+}
+
 #bantek {
   display: none;
   pointer-events: none;
@@ -447,6 +534,12 @@ title {
   pointer-events: auto;
 }
 
+#bantek-home {
+  width: 200px;
+  left:300px;
+  top:230px;
+}
+
 #we {
   display: none;
   pointer-events: none;
@@ -455,4 +548,10 @@ title {
 #we.visible {
   display: block;
   pointer-events: auto;
+}
+
+#we-home {
+  width: 210px;
+  left: 322px;
+  top: 580px;
 }

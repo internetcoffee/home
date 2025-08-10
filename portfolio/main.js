@@ -14,6 +14,9 @@ const noDrag = document.querySelector(".no-drag");
 // Store all image positions
 const imagePositions = new Map();
 
+// Disable scrolling
+document.body.classList.add('no-scroll');
+
 // Initialize positions based on their CSS values
 images.forEach(img => {
   const rect = img.getBoundingClientRect();
@@ -76,7 +79,7 @@ document.addEventListener("mouseup", () => {
 document.addEventListener("DOMContentLoaded", function () {
   const pageBg = document.querySelector(".page-bg");
   const xButton = document.querySelector(".x-button");
-  const hoverItems = document.querySelectorAll(".hover-color");
+  const hoverItems = document.querySelectorAll(".hover");
 
   let activeSection = null;
 
@@ -87,23 +90,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!targetSection) return;
 
-      // 🔁 If a section is already open and it's not the same one, close it
+      // If a section is already open and it's not the same one, close it
       if (activeSection && activeSection !== targetSection) {
         activeSection.classList.remove("visible");
       }
 
-      // ✅ Show the clicked section
+      //Show the clicked section
       targetSection.classList.add("visible");
       activeSection = targetSection;
 
       pageBg.classList.add("visible");
       xButton.classList.add("visible");
+
+      document.body.classList.remove('no-scroll');
     });
   });
 
   xButton.addEventListener("click", () => {
     pageBg.classList.remove("visible");
     xButton.classList.remove("visible");
+    document.body.classList.add('no-scroll');
 
     if (activeSection) {
       activeSection.classList.remove("visible");
